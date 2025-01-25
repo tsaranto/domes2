@@ -1,4 +1,3 @@
-package edu.aueb.ds.exceptions;
 
 /**
  * EmptyListException is a simple Exception.

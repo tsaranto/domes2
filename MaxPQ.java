@@ -18,14 +18,14 @@ public class MaxPQ implements PQInterface {
         swim(size);
     }
 
-//epistrefei ton epejergasti me ton megalutero xrono
+//epistrefei ton epejergasti me tin megaliteri protereotita
     public Processor max() {
         if (size == 0) {
             return null;
         }
         return heap[1];
     }
-//epistrefei ton epejergasti me ton megalutero xrono kai ton afairei apo tin oura
+//epistrefei ton epejergasti me tin megaliteri protereotita kai ton afairei apo ton pinaka
     public Processor getmax() {
         if (size == 0) {
             return null;

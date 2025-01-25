@@ -202,4 +202,16 @@ public class List<T> implements ListInterface<T> {
         }
         return count;
     }
+
+    public T get(int index) {
+        if (index < 0 || index >= size()) {
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+        Node<T> current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.getNext();
+        }
+        return current.getData();
+    }
 }
+

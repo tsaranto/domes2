@@ -8,18 +8,18 @@ public class Reader {
         this.filePath = filePath;
     }
 
+    //diavazei to arxeio kai epistrefei to plithos twn epejergastwn kai tis diergasies
     public Data readInput() throws IOException {
         try (Scanner sc = new Scanner(new File(filePath))) {
             int numProcessors = sc.nextInt();
-
             int numJobs = sc.nextInt();
 
-            List<Job> jobs = new ArrayList<>();
+            List<Job> jobs = new List<>();
 
             while (sc.hasNext()) {
                 int jobId = sc.nextInt();
                 int processingTime = sc.nextInt();
-                jobs.add(new Job(jobId, processingTime));
+                jobs.insertAtBack(new Job(jobId, processingTime));
             }
 
             if (jobs.size() != numJobs) {
@@ -32,7 +32,7 @@ public class Reader {
         }
     }
 
-
+    //klasi pou periexei to plithos twn epejergastwn kai tis diergasies
     public static class Data {
         private int numProcessors;
         private List<Job> jobs;

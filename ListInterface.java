@@ -1,6 +1,3 @@
-package edu.aueb.ds.lab4;
-
-import edu.aueb.ds.exceptions.EmptyListException;
 
 import java.util.Comparator;
 

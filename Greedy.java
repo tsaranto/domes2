@@ -11,7 +11,7 @@ public class Greedy {
         MaxPQ maxPQ = new MaxPQ();
 //arxiko assignment twn diergasiwn sta processors
         for (int i = 0; i < numProcessors; i++) {
-            Processor processor = new Processor(i);
+            Processor processor = new Processor(i+1);
             try {
                 processor.addJob(jobs.removeFromFront());
             } catch (EmptyListException e) {

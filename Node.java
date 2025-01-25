@@ -1,4 +1,3 @@
-package edu.aueb.ds.lab4;
 
 /**
  * ListNode represents a list node

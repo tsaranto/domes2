@@ -9,7 +9,7 @@ public class MaxPQ implements PQInterface {
         this.size = 0;
     }
 
-
+//prosthetoume epejergasti
     public void insert(Processor processor) {
         if (size >= heap.length * 3 / 4) {
             resize();
@@ -18,14 +18,14 @@ public class MaxPQ implements PQInterface {
         swim(size);
     }
 
-
+//epistrefei ton epejergasti me ton megalutero xrono
     public Processor max() {
         if (size == 0) {
             return null;
         }
         return heap[1];
     }
-
+//epistrefei ton epejergasti me ton megalutero xrono kai ton afairei apo tin oura
     public Processor getmax() {
         if (size == 0) {
             return null;
@@ -36,7 +36,7 @@ public class MaxPQ implements PQInterface {
         sink(1);
         return root;
     }
-
+//anakateuei ton epejergasti sti swsti thesi
     private void swim(int i) {
         while (i > 1 && heap[i].compareTo(heap[i / 2]) > 0) {
             swap(i, i / 2);
@@ -57,14 +57,14 @@ public class MaxPQ implements PQInterface {
             i = j;
         }
     }
-
+//antallagi twn 2 epejergastwn
     private void swap(int i, int j) {
         Processor temp = heap[i];
         heap[i] = heap[j];
         heap[j] = temp;
     }
 
- 
+ //an to megethos tou pinaka einai mikrotero apo to 3/4 tou megethous tou pinaka, to megethos tou pinaka diplasiazetai
     private void resize() {
         Processor[] newHeap = new Processor[heap.length * 2];
         System.arraycopy(heap, 1, newHeap, 1, size);

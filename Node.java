@@ -27,6 +27,10 @@ public class Node<T> {
         return data;
     }
 
+    public void setData(T data) {
+        this.data = data;
+    }
+
     /**
      * Get reference to next node
      *

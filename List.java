@@ -193,6 +193,33 @@ public class List<T> implements ListInterface<T> {
         tail = newTail;
     }
 
+    public T get(int index) {
+        if (index < 0 || index >= size()) {
+            throw new IndexOutOfBoundsException("Index out of bounds: " + index);
+        }
+
+        Node<T> current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.getNext();
+        }
+
+        return current.getData();
+    }
+
+    public void set(int index, T data) {
+        if (index < 0 || index >= size()) {
+            throw new IndexOutOfBoundsException("Index out of bounds: " + index);
+        }
+
+        Node<T> current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.getNext();
+        }
+
+        current.setData(data);
+    }
+
+
     public int size() {
         int count = 0;
         Node<T> current = head;
@@ -201,17 +228,6 @@ public class List<T> implements ListInterface<T> {
             current = current.getNext();
         }
         return count;
-    }
-
-    public T get(int index) {
-        if (index < 0 || index >= size()) {
-            throw new IndexOutOfBoundsException("Index out of bounds");
-        }
-        Node<T> current = head;
-        for (int i = 0; i < index; i++) {
-            current = current.getNext();
-        }
-        return current.getData();
     }
 }
 

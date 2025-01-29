@@ -9,7 +9,7 @@ public class Sort {
 
         // ektelese to heap sort
         for (int i = n - 1; i > 0; i--) {
-          
+
             swap(jobs, 0, i);
             heapify(jobs, i, 0);
         }

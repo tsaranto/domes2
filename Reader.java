@@ -8,6 +8,10 @@ public class Reader {
         this.filePath = filePath;
     }
 
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
     //diavazei to arxeio kai epistrefei to plithos twn epejergastwn kai tis diergasies
     public Data readInput() throws IOException {
         try (Scanner sc = new Scanner(new File(filePath))) {

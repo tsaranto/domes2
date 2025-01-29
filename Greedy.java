@@ -7,12 +7,12 @@ public class Greedy {
         Reader.Data data = reader.readInput();
         List<Job> jobs = data.getJobs();
         int numProcessors = data.getNumProcessors();
-        greedy(jobs, numProcessors);
- 
+        greedyImpl(jobs, numProcessors);
+
 
     }
 
-    private static void greedy(List<Job> jobs, int numProcessors) {
+    protected static int greedyImpl(List<Job> jobs, int numProcessors) {
         MaxPQ maxPQ = new MaxPQ();
         //arxiko assignment twn diergasiwn sta processors
                 for (int i = 0; i < numProcessors; i++) {
@@ -63,6 +63,10 @@ public class Greedy {
         
         
                 System.out.println("Makespan = " + makespan);
+                return makespan;
             }
+
+
     }
+
 
